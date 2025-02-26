@@ -6,8 +6,8 @@ import {
 import {
   getDiscoverMovies,
   getMovieCredits,
-  getMovieKeywords,
-  getMovieReviews,
+  // getMovieKeywords,
+  // getMovieReviews,
   getPopularMovies,
   getSelectedMovie,
   getTopRatedMovies, getTrendingMovies,
@@ -138,9 +138,9 @@ export function* movieSaga({ type, payload }: ISagaArgs): any {
         const { mediaType, id } = payload;
         const [movie, keywords, casts, reviews] = yield all([
           call(getSelectedMovie, mediaType, id),
-          call(getMovieKeywords, mediaType, id),
+          // call(getMovieKeywords, mediaType, id),
           call(getMovieCredits, mediaType, id),
-          call(getMovieReviews, mediaType, id),
+          // call(getMovieReviews, mediaType, id),
         ]);
 
         yield put(fetchSelectedMoviesSuccess({
