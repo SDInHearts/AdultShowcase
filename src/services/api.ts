@@ -105,17 +105,17 @@ export const getMovieCredits = (mediaType: TMediaType, id: string) => {
   });
 }
 
-export const getMovieKeywords = (mediaType: TMediaType, id: string) => {
-  return httpRequest<{ id: string; keywords: IKeyword[] }>({
-    url: `/${mediaType}/${id}/keywords`
-  });
-}
+// export const getMovieKeywords = (mediaType: TMediaType, id: string) => {
+//   return httpRequest<{ id: string; keywords: IKeyword[] }>({
+//     url: `/${mediaType}/${id}/keywords`
+//   });
+// }
 
-export const getMovieReviews = (mediaType: TMediaType, id: string) => {
-  return httpRequest<{ id: string; results: IReview[] }>({
-    url: `/${mediaType}/${id}/reviews`
-  });
-}
+// export const getMovieReviews = (mediaType: TMediaType, id: string) => {
+//   return httpRequest<{ id: string; results: IReview[] }>({
+//     url: `/${mediaType}/${id}/reviews`
+//   });
+// }
 
 
 export const search = (category: TMediaType | 'person', query: string, page = 1) => {
